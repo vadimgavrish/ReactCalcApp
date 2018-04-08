@@ -4,6 +4,9 @@ import Button from '../Button/Button';
 class ButtonRow extends Component {
 	render() {
 		const data = this.props.data;
+
+		// Create button for each label and 
+		// callback provided
 		const buttons = data.map((button, index) => {
 			return <Button 
 				label={data[index][0]} 

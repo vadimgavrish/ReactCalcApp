@@ -14,6 +14,8 @@ class App extends Component {
     };
   }
 
+  // Add character to screen. If it is first key being pressed,
+  // set the first character to that instead of default 0.
   addChar(char) {
     if (this.state.updated) {
       const input = this.state.input + char.toString();
@@ -28,6 +30,7 @@ class App extends Component {
     }
   }
 
+  // Reset screen to default state
   clearInput() {
     this.setState({
       input: 0,
@@ -36,6 +39,7 @@ class App extends Component {
     });
   }
 
+  // Put an error on screen
   setError() {
     this.setState({
       input: 'Error',
@@ -43,6 +47,7 @@ class App extends Component {
     });
   }
 
+  // Chear error from the screen
   clearError() {
     this.setState({
       input: 0,
@@ -51,13 +56,12 @@ class App extends Component {
     });
   }
 
+  // Delete last character entered. If it last one,
+  // set the screen to show the default 0.
   delete() {
     const input = this.state.input.toString();
     if (input.length === 1) {
-      this.setState({
-        input: 0,
-        updated: false,
-      });
+      this.clearInput();
     } else {
       this.setState({
         input: input.slice(0, -1),
@@ -65,6 +69,8 @@ class App extends Component {
     }
   }
 
+  // Evaluate entered expression, put error
+  // on the screen if it is invalid
   evaluate() {
     try {
       this.setState({
@@ -76,6 +82,7 @@ class App extends Component {
     }
   }
 
+  // Update the screen based on the key pressed
   updateInput(char) {
     if (char === 'AC') {
       this.clearInput();
@@ -88,13 +95,18 @@ class App extends Component {
     }
   }
 
+  // Either clear error or update the screen with new input
+  // Made so that any button press can clear the error
   handlePress(char) {
     this.state.error ? this.clearError() : this.updateInput(char);
   }
 
   render() {
+    // When there are more than 9 characters, screen should be
+    // centered to avoid overflows
     const centerDisplay = this.state.input.toString().length > 9; 
 
+    // Set up the labels and callbacks for each button
     const firstRow = [
       ['(', () => this.handlePress('(')],
       [')', () => this.handlePress(')')],
