@@ -6,7 +6,7 @@ class ButtonRow extends Component {
 		const data = this.props.data;
 
 		// Create button for each label and 
-		// callback provided
+		// callback provided.
 		const buttons = data.map((button, index) => {
 			return <Button 
 				label={data[index][0]} 

@@ -4,7 +4,7 @@ import './Screen.css';
 class Screen extends Component {
 	render() {
 		// Add proper class to screen depending on the amount
-		// of characters currently displayed
+		// of characters currently displayed.
 		const className = this.props.centerDisplay ? 
 			"display centerText"
 			:

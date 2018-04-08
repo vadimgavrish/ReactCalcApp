@@ -30,7 +30,7 @@ class App extends Component {
     }
   }
 
-  // Reset screen to default state
+  // Reset screen to default state.
   clearInput() {
     this.setState({
       input: 0,
@@ -39,7 +39,7 @@ class App extends Component {
     });
   }
 
-  // Put an error on screen
+  // Put an error on screen.
   setError() {
     this.setState({
       input: 'Error',
@@ -47,7 +47,7 @@ class App extends Component {
     });
   }
 
-  // Chear error from the screen
+  // Chear error from the screen.
   clearError() {
     this.setState({
       input: 0,
@@ -70,7 +70,7 @@ class App extends Component {
   }
 
   // Evaluate entered expression, put error
-  // on the screen if it is invalid
+  // on the screen if it is invalid.
   evaluate() {
     try {
       this.setState({
@@ -82,7 +82,7 @@ class App extends Component {
     }
   }
 
-  // Update the screen based on the key pressed
+  // Update the screen based on the key pressed.
   updateInput(char) {
     if (char === 'AC') {
       this.clearInput();
@@ -95,18 +95,18 @@ class App extends Component {
     }
   }
 
-  // Either clear error or update the screen with new input
-  // Made so that any button press can clear the error
+  // Either clear error or update the screen with new input.
+  // Made so that any button press can clear the error.
   handlePress(char) {
     this.state.error ? this.clearError() : this.updateInput(char);
   }
 
   render() {
     // When there are more than 9 characters, screen should be
-    // centered to avoid overflows
+    // centered to avoid overflows.
     const centerDisplay = this.state.input.toString().length > 9; 
 
-    // Set up the labels and callbacks for each button
+    // Set up the labels and callbacks for each button.
     const firstRow = [
       ['(', () => this.handlePress('(')],
       [')', () => this.handlePress(')')],
