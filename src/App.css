@@ -1,0 +1,19 @@
+.wrapper {
+  text-align: center;
+  padding: 10px;
+}
+
+.header {
+  height: 100px;
+  padding-bottom: 10px;
+  color: white;
+  background-color: rgb(15, 15, 15);
+}
+
+.body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  user-select: none;
+  height: 100vh;
+  color: white;
+  background: linear-gradient(rgb(45, 45, 45), rgb(25, 25, 25))
+}

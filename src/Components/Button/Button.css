@@ -1,0 +1,19 @@
+.button {
+	margin: 5px;
+	padding: 5px;
+	font-size: 40px;
+	width: 50px;
+	display: inline-block;
+	transition: 0.5s all;
+}
+
+.button:hover {
+	transform: scale(1.15);
+	color: rgb(0, 153, 255);
+	cursor: pointer;
+}
+
+.button:active {
+	transform: scale(1.10);	
+	color: rgb(0, 101, 168);
+}
