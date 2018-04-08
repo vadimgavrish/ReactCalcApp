@@ -1,3 +1,5 @@
 ## React Calculator App
-<img src="public/screenshotOne.png" width="100">
-<img src="public/screenshotTwo.png" width="100">
+<div display="inline-block">
+  <img src="public/screenshotOne.png" width="200">
+  <img src="public/screenshotTwo.png" width="200">
+</div>
