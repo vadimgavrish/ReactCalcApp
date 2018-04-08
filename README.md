@@ -10,4 +10,4 @@
 3. Go to `localhost:3000` on your machine
 
 ## About
-A simple calculator built with React and MathJS. Will throw error if expression is invalid, allowed use of brackets, square root, exponents, delete previous key, etc.
+A simple calculator built with React and MathJS. Will throw error if expression is invalid, allows use of brackets, square root, exponents, delete previous character, etc.
