@@ -1,3 +1,3 @@
 ## React Calculator App
-![Screenshot One](public/screenshotOne.png)
-![Screenshot Two](public/screenshotTwo.png)
+![](public/screenshotOne.png =250x)
+![](public/screenshotTwo.png =250x)
