@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './ButtonRow.css';
 import Button from '../Button/Button';
 
 class ButtonRow extends Component {
